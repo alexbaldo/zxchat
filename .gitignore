@@ -1,0 +1,23 @@
+# Nada de esto se sube: secrets.h lleva la API key incrustada y .env tambien.
+# Los patrones van SIN barra a proposito, para que valgan a cualquier
+# profundidad: "src/secrets.h" quedaba anclado a la raiz y no cubria
+# spectrum/src/secrets.h, que es justo donde esta.
+secrets.h
+.env
+*.tap
+*.bin
+
+# Cualquier directorio de compilacion de CMake, se llame como se llame.
+build*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.o
+*.map
+version.h
+node_modules/
+.DS_Store
+
+# Notas internas: no se publican.
+docs/
